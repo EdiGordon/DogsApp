@@ -33,9 +33,7 @@ const userSlice = createSlice({
             })
     },
 });
-// also exported fetchUsers at the top
 
-//export the reducer
 export default userSlice.reducer
 
 

@@ -2,9 +2,12 @@ const AboutView = () => {
 
   return (
     <div>
-      <h1 className="text-center">Dog Breeds</h1>
-      <h2>We are in Dogs App, presenting all types of dogs breeds from the letter A to Z, you can search for dogs by name or by talkative or energetic dogs.</h2>
-
+      <h1 className="text-center">Mission Statement</h1>
+      <h2>
+        We cooperate with AKC-American Kennel Club, and together we believe in advocating all breeds as family companions, and promoting the health and well-being of dogs, working to protect the rights of all dog owners and promoting responsible dog ownership.
+        Care is taken to promote the study, breeding, display, operation and maintenance of thoroughbred dogs.
+      </h2>
+      <br />
       <h4>What's a dog breed?</h4>
       <h5 className='p-3 text-dark'>
         People have been breeding dogs since prehistoric times. The earliest dog breeders used wolves to create domestic dogs. From the beginning, humans purposefully bred dogs to perform various tasks. Hunting, guarding, and herding are thought to be among the earliest jobs eagerly performed by the animal destined to be called “man's best friend.”

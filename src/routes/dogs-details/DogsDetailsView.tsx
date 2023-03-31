@@ -1,8 +1,7 @@
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import css from "./NewsDetailsView.module.scss";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { toggleFavorite, removeDog, editDog } from "../../features/news/newsSlice";
+import { toggleFavorite, removeDog, editDog } from "../../features/dogs/dogsSlice";
 import { useState } from "react";
 
 
@@ -25,7 +24,6 @@ const NewsDetailsView = () => {
 
   const { name, image_link, description, isFavorite, energy } = dog;
 
-  const iconStyle = { color: "blue", height: "100px", width: "100px" };
   return (
     <div className="w-75 mx-auto d-flex flex-column justify-content-center align-items-center">
       <h3>{name}</h3>
@@ -52,7 +50,7 @@ const NewsDetailsView = () => {
         }}
         placeholder="description"
       />
-      
+
       <h3>Energy</h3>
       <input
         className="rounded-5 text-center"
@@ -66,30 +64,30 @@ const NewsDetailsView = () => {
 
       <br />
       <div className="p-1 m-2">
-      <button
-        className="btn btn-info w-50 rounded-5"
-        onClick={() => {
-          navigate(-1);
-        }}>
-        Back
-      </button>
-      <button
-          className="btn btn-secondary w-50 rounded-5" 
-        onClick={() => {
-          dispatch(editDog([dog.name, desc]));
-        }}>
-      Edit me
-      </button>
-      <button
-        className="btn btn-danger w-100 rounded-5"
-        onClick={() => {
-          dispatch(removeDog(dog.name));
-          navigate(-1);
-        }}>
-        Delete me
+        <button
+          className="btn btn-info w-50 rounded-5"
+          onClick={() => {
+            navigate(-1);
+          }}>
+          Back
+        </button>
+        <button
+          className="btn btn-secondary w-50 rounded-5"
+          onClick={() => {
+            dispatch(editDog([dog.name, desc]));
+          }}>
+          Edit me
+        </button>
+        <button
+          className="btn btn-danger w-100 rounded-5"
+          onClick={() => {
+            dispatch(removeDog(dog.name));
+            navigate(-1);
+          }}>
+          Delete me
         </button>
       </div>
-     
+
     </div>
   );
 };

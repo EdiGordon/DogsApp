@@ -1,6 +1,4 @@
-import { Dog } from "../features/news/news";
-
-import { v4 } from 'uuid';
+import { Dog } from "../features/dogs/dogs";
 
 export const dogsApiUrl =
     "https://api.api-ninjas.com/v1/dogs?name=a"

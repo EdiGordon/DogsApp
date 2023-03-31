@@ -1,7 +1,7 @@
 import { useAppSelector } from "../../app/hooks";
 import NewsItem from "./DogsItem";
 import { useState } from "react";
-import { Dog } from "../../features/news/news";
+import { Dog } from "../../features/dogs/dogs";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 const NewsView = () => {

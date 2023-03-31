@@ -1,6 +1,6 @@
 import { fetchDogs } from "../../services/dogs-service";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Dog, Dogs } from "./news.d";
+import { Dog, Dogs } from "./dogs";
 
 const initialState: Dogs = {
     dogs: [],
@@ -18,7 +18,6 @@ const newsSlice = createSlice({
     name: "news",
     initialState,
     reducers: {
-        //payload = id of the article
         toggleFavorite: (state, action: PayloadAction<string>) => {
             const index = state.dogs.findIndex((a) => a.name === action.payload);
             if (index !== -1) {

@@ -8,8 +8,7 @@ import FavoritesView from "./routes/favorites/FavoritesView";
 import NewsDetailsView from "./routes/dogs-details/DogsDetailsView";
 import NewsView from "./routes/dogs/DogsView";
 import AddDogView from "./routes/dogs/components/AddDogView";
-
-import { fetchNews } from "./features/news/newsSlice";
+import { fetchNews } from "./features/dogs/dogsSlice";
 import { IconContext } from "react-icons";
 import FooTer from "./components/footer/Footer"
 

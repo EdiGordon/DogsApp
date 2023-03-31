@@ -1,14 +1,11 @@
 import "./AddDogView.scss";
 import { useState } from "react";
 import Modal from "react-modal";
-import Swal from "sweetalert2";
-import { v4 } from "uuid";
 import { useAppDispatch } from "../../../app/hooks";
-import { Dog } from "../../../features/news/news";
-import { addDog } from "../../../features/news/newsSlice";
+import { Dog } from "../../../features/dogs/dogs";
+import { addDog } from "../../../features/dogs/dogsSlice";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
-// import { Card, Category, addCard } from "../../features/cards/cardsSlice";
 
 const AddDogView = () => {
   const navigate = useNavigate();
@@ -18,11 +15,8 @@ const AddDogView = () => {
 
   const [energy, setEnergy] = useState(0);
 
-
-  //dispatch:
   const dispatch = useAppDispatch();
 
-  // 1) boolean state for the modal:
   const [isOpen, setOpen] = useState(false);
   Modal.setAppElement("#root");
 
@@ -88,7 +82,7 @@ const AddDogView = () => {
             };
             dispatch(addDog(dog));
             navigate(-1)
-            // Swal.fire("success", "", "success").then((e) => closeModal());
+            
           }}
         >
           Add Dog

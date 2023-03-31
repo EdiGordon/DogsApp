@@ -1,3 +1,3 @@
-import { Dog } from './../features/news/news.d';
+import { Dog } from '../features/dogs/dogs';
 
 export type NewsItemProps = {} & Dog;
