@@ -50,7 +50,7 @@ const NewsView = () => {
       </button>
       <br />
       <button
-        className="btn btn-primary rounded-5 w-10 p-2 m-3"
+        className="btn btn-primary  rounded-5 w-10 p-2 m-3"
         onClick={() => {
           navigate("/newdog");
         }}
